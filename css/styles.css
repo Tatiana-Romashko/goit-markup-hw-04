@@ -13,6 +13,7 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --hero-background-color: #2f303a;
+  --hero-background-gradient-color: rgba(47, 48, 58, 0.4);
   --logo-first-part-color: #2196f3;
   --header-border-color: #ececec;
   --button-shadow-color: rgba(0, 0, 0, 0.15);
@@ -170,15 +171,16 @@ img {
 }
 .header-contact:hover,
 .header-contact:focus,
+.header-contact:hover > .phone-icon,
+.header-contact:focus > .phone-icon,
+.header-contact:hover > .mail-icon,
+.header-contact:focus > .mail-icon,
 .contacts-item-link:hover,
-.contacts-item-link:focus,
-.mail-icon:hover,
-.mail-icon:focus,
-.mail-icon:hover,
-.mail-icon:focus {
-  color: var(--links-secondary-color);
+.contacts-item-link:focus {
   fill: var(--links-secondary-color);
+  color: var(--links-secondary-color);
 }
+
 .mail-icon {
   width: 16px;
   height: 12px;
@@ -229,8 +231,8 @@ img {
 .hero {
   background: var(--hero-background-color);
   background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      var(--hero-background-gradient-color),
+      var(--hero-background-gradient-color)
     ),
     url("../images/hero-background.png");
   background-repeat: no-repeat;
@@ -499,6 +501,7 @@ img {
 }
 .footer-social-header {
   text-transform: uppercase;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
